@@ -3,10 +3,11 @@ import psycopg2
 def obtener_conexion():
     try:
         conn = psycopg2.connect(
-            host="postgresql://root:CfaSAYkRnGA56sW5YLV4xfAhAuNS3dGh@dpg-d0v66cvfte5s739a9j7g-a.oregon-postgres.render.com/entregascondor_bd",
+            host="dpg-d0v66cvfte5s739a9j7g-a.oregon-postgres.render.com",
             database="entregascondor_bd",
             user="root",
-            password="CfaSAYkRnGA56sW5YLV4xfAhAuNS3dGh"
+            password="CfaSAYkRnGA56sW5YLV4xfAhAuNS3dGh",
+            port=5432
         )
         return conn
     except Exception as e:
