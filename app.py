@@ -1,3 +1,8 @@
+from flask import Flask, render_template, request, redirect, url_for
+from modelos import clientes  # Ajusta según tu estructura de carpetas
+
+app = Flask(__name__)
+
 @app.route("/clientes", methods=["GET", "POST"])
 def clientes_lista():
     print("🔵 Entró a la ruta /clientes")
