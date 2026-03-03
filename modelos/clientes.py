@@ -22,6 +22,9 @@ def obtener_todos_los_clientes():
         sql = "SELECT id, nombre, email FROM clientes"
         cursor.execute(sql)
         clientes = cursor.fetchall()
+
+        print("DEBUG CLIENTES:", clientes)  # 👈 AQUÍ
+
         cursor.close()
         conn.close()
         return clientes
